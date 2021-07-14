@@ -25,11 +25,13 @@
      	if(!$hasError)
      	{
      		$rs= insertCatagory("$name");
-     		var_dump($rs);
-     		/*if($rs===true)
+     		
+     		if($rs===true)
      		{
      			header("Location: AllCatagories.php");
-     		}*/
+     		}
+
+               $err_db= $rs;
 
      	}
      }

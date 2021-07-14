@@ -23,9 +23,7 @@
       	     	   <input type="submit" name="Submit" value="Submit">
       	     </div><br>
 
-      	     <?php echo $err_db; ?>
-      	     	 	  
-      	    
+      	     <?php echo $err_db; ?>     	    
       </form>
 </body>
 </html>

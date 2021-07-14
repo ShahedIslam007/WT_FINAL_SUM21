@@ -215,13 +215,13 @@
             {
             	$rs= InsertData($fname, $lname, $email, $gender, $add, $pass, $cpass);
 
-            	var_dump($rs);
-            	/*if($rs===true)
+            	
+            	if($rs===true)
             	{
             		header("Location: login.php");
             	}
 
-            	$err_db= $rs;*/
+            	$err_db= $rs;
             }
 
      }
