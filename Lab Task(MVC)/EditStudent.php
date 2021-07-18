@@ -13,6 +13,7 @@
 </head>
 <body>
       <form action="" method="POST">
+          <input type="hidden" name="id" value="<?php echo $id?>">
              <div align="center">
                    <tr>
                        <td>
@@ -65,7 +66,7 @@
                            <?php
                                 foreach ($department as $d) 
                                 {
-                                   echo '<option value="'.$d["id"].'">'.$d["Name"].'</option>';
+                                   echo '<option value="'.$d["id"].'" name="dept">'.$d["Name"].'</option>';
                                 }  
                            ?>
                            </select>

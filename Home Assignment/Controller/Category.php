@@ -41,7 +41,7 @@
           if(empty($_POST["name"]))
           {
                $err_name="Name Required";
-            $hasError = true;
+               $hasError = true;
           }
 
           else
