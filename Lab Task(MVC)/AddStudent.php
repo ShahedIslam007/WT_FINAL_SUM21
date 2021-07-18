@@ -1,6 +1,6 @@
 <?php  
      include 'Controller/StudentController.php';
-     require_once 'Controller/DepartmentController.php';
+
      $department = getAllDepartment();
 ?>
 
@@ -62,14 +62,16 @@
 
                    <tr>
                        <td>
-                           Department
-                           <option disabled="Choose" selected="Choose">Choose</option>
+                           Department:
+                           <select name="Dept_id">
+                                <option disabled selected>Choose</option>
                            <?php
                                 foreach ($department as $d) 
                                 {
-                                   echo 
+                                   echo '<option value="'.$d["id"].'">'.$d["Name"].'</option>';
                                 }  
                            ?>
+                           </select>
                        </td>
                    </tr>  
              </div><br>
