@@ -1,6 +1,10 @@
 <?php  
      include 'Model/db_config.php';
-
+     
+     $uname="";
+     $err_uname="";
+     $pass="";
+     $err_pass="";
      $name="";
      $err_name="";
      $birth="";
@@ -159,6 +163,44 @@
           }
      }
 
+     if (isset($_POST["login"]))
+     {
+     	if(empty($_POST["uname"]))
+     	{
+     		$err_uname="User Name Required";
+     		$hasError=true;
+     	}
+
+     	else
+     	{
+     		$uname=$_POST["uname"];
+     	}
+
+     	if(empty($_POST["password"]))
+     	{
+     		$err_pass="Password Required";
+     		$hasError=true;
+     	}
+
+     	else
+     	{
+     		$pass=$_POST["password"];
+     	}
+
+		//Checking data from Database
+
+		if (!$hasError) 
+		{
+			if(AuthenticateData($uname, $pass))
+			{
+				header("Location: Dashboard.php");
+			}
+
+			$err_db="Username Or Password Invalid";
+		}
+
+     }
+
      function insertStudent($name,$DOB,$Credit,$CGPA,$Dept_id)
      {
      	$query="INSERT INTO student VALUES(NULL,'$name','$DOB','$Credit','$CGPA','$Dept_id')";
@@ -196,5 +238,17 @@
      {
           $query = "update student set name='$name', dob='$DOB', credit='$Credit', cgpa='$CGPA' where id=$id";
           return execute($query);
+     }
+
+     function AuthenticateData($uname, $pass)
+     {
+     	$query= "select * from login where Username='$uname' and Password='$pass'";
+     	$rs= get($query);
+     	if(count($rs)>0)
+     	{
+     		return true;
+     	}
+
+     	return false;
      }
 ?>
