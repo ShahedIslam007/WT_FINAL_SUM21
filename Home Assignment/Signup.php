@@ -5,8 +5,6 @@
 
 ?>
 
-
-
 <html>
   <head>
 	<title>Photographer SignUp</title>

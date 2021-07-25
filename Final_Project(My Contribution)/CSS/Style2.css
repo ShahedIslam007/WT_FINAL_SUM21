@@ -1,0 +1,320 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+.logo
+{
+	height: 150px;
+	width: 160px;
+	position: absolute;
+	top: 1%;
+	left: 1%;
+}
+
+.option
+{
+	position: absolute;
+	top: 4%;
+	left: 58%;
+}
+
+.option a
+{
+	text-shadow: 5px 5px 5px #fc5c65;
+	font-size: 29px;
+	color: #00b894;
+	text-decoration: none;
+	transition: font-size 1s, color 0.5s;
+}
+
+.option a:hover
+{
+	font-size: 35px;
+	color: #6F1E51;
+}
+
+#sidenav
+{
+	width: 250px;
+	height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: #009688;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+nav ul li 
+{
+	list-style: none;
+	margin: 50px 20px;
+}
+
+#sidenav ul a
+{
+	line-height: 35px;
+	padding-left: 0px;
+}
+
+nav ul li a
+{
+	font-family: Comic sans MS;
+	font-size: 18px;
+	text-decoration: none;
+	list-style: none;
+	color: #fff;
+	padding-left: 40px;
+	transition: font-size 0.4s, color 0.4s;
+}
+
+nav ul li a:hover
+{
+	font-size: 25px;
+	color: #1B1464;
+}
+
+#menubtn
+{
+	width: 50px;
+	height: 50px;
+    background: #009688;
+	text-align: center;
+	position: fixed;
+	right: 30px;
+	top: 20px;
+	border-radius: 3px;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#menubtn img
+{
+	width: 20px;
+	margin-top: 15px;
+}
+
+.to-top
+{
+	background: #fffa65;
+	position: fixed;
+	bottom: 16px;
+	left: 32px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 32px;
+	color: #0984e3;
+	text-decoration: none;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .4s;
+}
+
+.to-top.active
+{
+	bottom: 32px;
+	pointer-events: auto;
+	opacity: 1;
+}
+
+html
+{
+	scroll-behavior: smooth;
+}
+
+#img
+{
+	background-color: #262239;
+	width: 100%;
+	padding: 70px 0;
+}
+
+#img h2
+{
+	font-family: Comic sans MS;
+	color: #ff9900;
+	font-size: 70px;
+	text-align: center;
+}
+
+#img h1
+{
+	font-family: Poppins;
+	color: #16a085;
+}
+
+.img1
+{
+	border-radius: 10px;
+	height: 400px;
+	width: 400px;
+	transition: transform .8s;
+}
+
+.img1:hover
+{
+	transform: translateY(12px);
+}
+
+#banner2
+{
+	background: #252839;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+}
+
+#banner2 h2
+{
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	position: relative;
+	font-size: 3.5vw;
+	color: #252839;
+	-webkit-text-stroke: 0.3vw #252839;	
+}
+
+#banner2 h2::before
+{
+	content: attr(data-text);
+	position: absolute;
+	color: #eb2f06;
+	-webkit-text-stroke: 0vw #383d52;
+	border-left: 2px solid #01fe87;	
+	overflow: hidden;
+	animation: animate 6s linear infinite;
+}
+
+@keyframes animate
+{
+	0%,10%,100%
+	{
+		width: 0;
+	}
+
+	70%,90%
+	{
+		left: 9%;
+		width: 100%;
+	}
+}
+
+.option2
+{
+    position: sticky;
+	left: 55%;
+}
+
+.option2 a
+{
+	text-shadow: 5px 5px 5px #fc5c65;
+	font-size: 29px;
+	color: #00b894;
+	text-decoration: none;
+	transition: font-size 1s, color 0.5s;
+}
+
+.option2 a:hover
+{
+	font-size: 35px;
+	color: #6F1E51;
+}
+
+.back
+{
+	background: #252839;
+}
+
+.social
+{
+	background: #e3edf7;
+	background-size: cover;
+	background-position: center;
+	height: 60vh;
+}
+
+.social h1
+{
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 25px;
+	letter-spacing: 4px;
+	padding: 100px 0 100px;
+	color: #555;
+	text-align: center;
+}
+
+.media
+{
+	display: flex;
+	justify-content: center;
+}
+
+.media a
+{
+	display: flex;
+	background: #e3edf7;
+	height: 75px;
+	width: 75px;
+	margin: 0 15px;
+	border-radius: 8px;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+	border: 1px solid rgba(0, 0, 0, 0);
+	transition: transform 0.5s;
+}
+
+.media a i
+{
+	font-size: 35px;
+	color: #0777;
+	transition: transform 0.5s;
+} 
+
+.media a:hover
+{
+	box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px rgba(255, 255, 255, 1), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+	border: 1px solid rgba(0, 0, 0, 0.01);
+	transform: translateY(10px);
+}
+
+.media a:hover i
+{
+	transform: scale(0.90);
+}
+
+.media a:hover .fa-facebook
+{
+	color: #3b5998;
+}
+
+.media a:hover .fa-twitter
+{
+	color: #00acee;
+}
+
+.media a:hover .fa-whatsapp
+{
+	color: #4fce5d;
+}
+
+.media a:hover .fa-instagram
+{
+	color: #f14843;
+}
+
+.media a:hover .fa-youtube
+{
+	color: #f00;
+}
