@@ -6,4 +6,4 @@
 	<link rel="stylesheet" type="text/css" href="CSS/Style.css">
 	<link rel="stylesheet" type="text/css" href="CSS/Style7.css">
 </head>
-<body>
+<body background="Picture/20.jpg">

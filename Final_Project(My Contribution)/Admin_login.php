@@ -1,5 +1,13 @@
 <?php  
      include 'Controller/AdminLoginController.php';
+     //$e=getAll();
+     //print_r($e);
+     if(isset($_GET["msg"]) ){
+          if($_GET["msg"] == "reset_success"){
+               echo "<script>alert('Password Changed Successfully');</script>";
+          }
+     }
+
 ?>
 
 <html>
@@ -24,6 +32,10 @@
                          <input type="submit" value="Login" name="login">
                          <font color="red"><?php echo $err_db; ?></font>
                          <a href="ResetPassword.php">Forgot Your Password?</a>
+                         <?php  
+                              //echo '<a href="ResetPassword.php?id='.$e["id"].'">Forgot Your Password?</a>';
+                         ?>
+                         
             </form>
      </div>
 </body>

@@ -14,7 +14,7 @@
 
           
      <div class="login" align="center">
-     	  <h1>Login As</h1>
+            <h1>Login As</h1>
           <a href="#">Photographer</a>&nbsp;&nbsp;&nbsp;
           <a href="#">Customer</a>&nbsp;&nbsp;&nbsp;
           <a href="#">Tutor</a>&nbsp;&nbsp;&nbsp;

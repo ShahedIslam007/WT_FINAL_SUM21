@@ -85,7 +85,7 @@
 			$rs=AuthenticateData($email, $pass);
 			if($rs===true)
 			{
-				header("Location: Start.php");
+				header("Location: AdminDashboard.php");
 			}
 
 			$err_db="Username Or Password Invalid";
@@ -119,6 +119,53 @@
 			$pass=$_POST["password"];
 		}
 
+		else if(empty($_POST["email"]))      //Email validation
+     	{
+			$err_email="Email Required";
+			$hasError = true;
+		}
+
+		elseif(strpos($_POST["email"],'@') && strpos($_POST["email"],'.'))
+		{
+			$email=$_POST["email"];
+		}
+
+		elseif(!strpos($_POST["email"],'@') && !strpos($_POST["email"],'.'))
+		{
+             $err_email="First use @ and then .(dot)";
+			 $hasError = true;
+		}
+
+		elseif(!strpos($_POST["email"],'@'))
+		{
+			if(strpos($_POST["email"],'.'))
+			{
+				$err_email="First use @ and then .(dot)";
+		        $hasError = true;
+			}
+
+			else
+			{
+				$err_email="First use @ and then .(dot)";
+		        $hasError = true;
+			}
+		}
+
+		elseif (strpos($_POST["email"],'@') ) 
+		{
+			if (strpos($_POST["email"],'.')) 
+			{
+			    $email=$_POST["email"];
+			}
+
+			elseif (!strpos($_POST["email"],'.') || strpos($_POST["email"],'@'))
+			{
+				$err_email="First use @ and then .(dot)";
+			    $hasError = true;
+			}
+			
+		}
+
 		
        //Confirm password validation
 	   
@@ -143,11 +190,11 @@
 
 		if (!$hasError)
 		{
-			$rs=updatePassword("$cpass",$_POST["id"]);
+			$rs=updatePassword($cpass,$email);
 			
                if($rs===true)
                {
-                    header("Location: Admin_login.php");
+                    header("Location: Admin_login.php?msg=reset_success");
                }
 
                $err_db= $rs;
@@ -162,9 +209,16 @@
           return $rs[0];
      }
 
-     function updatePassword($cpass,$id)
+     function updatePassword($cpass,$email)
      {
-          $query = "update admin_login set Password='$cpass' where id=$id";
+          $query = "update admin_login set Password='$cpass' where Email='$email'";
           return execute($query);
      }
+
+     function getAll()
+     {
+		$query = "select * from admin_login";
+		$rs = get($query);
+		return $rs;
+	}
 ?>
