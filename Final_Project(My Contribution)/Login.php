@@ -11,27 +11,31 @@
      include 'Menubar.php';
      include 'MenuButton.php';
 ?>
-
-          
-     <div class="login" align="center">
-            <h1>Login As</h1>
-          <a href="#">Photographer</a>&nbsp;&nbsp;&nbsp;
-          <a href="#">Customer</a>&nbsp;&nbsp;&nbsp;
-          <a href="#">Tutor</a>&nbsp;&nbsp;&nbsp;
-          <a href="#">Learner</a>&nbsp;&nbsp;&nbsp;
-          <a href="Admin_login.php">Admin</a>
-     </div>
-          
+     
+     <br><br><br><br><br><br><br><br><br>     
+     <h1 align="center">
+          <font face="Comic sans MS" size="7" color="#cc6600">Login As<br>
+                 <a href="#"><button>Photographer</button></a>&nbsp;&nbsp;&nbsp;
+                 <a href="#"><button>Customer</button></a>&nbsp;&nbsp;&nbsp;
+                 <a href="#"><button>Tutor</button></a>&nbsp;&nbsp;&nbsp;
+                 <a href="#"><button>Learner</button></a>&nbsp;&nbsp;&nbsp;
+                 <a href="Admin_login.php"><button>Admin</button></a>
+          </font>
+      </h1>
 
       <br><br><br>
-      <div class="sign-up" align="center">
-     	  <h1>Sign-up As</h1>
-          <a href="#">Photographer</a>&nbsp;&nbsp;&nbsp;
-          <a href="#">Customer</a>&nbsp;&nbsp;&nbsp;
-          <a href="#">Tutor</a>&nbsp;&nbsp;&nbsp;
-          <a href="#">Learner</a>&nbsp;&nbsp;&nbsp;
-     </div>
+      <h1 align="center">
+          <font face="Comic sans MS" size="7" color="blue">Sign-Up As<br>
+                 <a href="#"><button>Photographer</button></a>&nbsp;&nbsp;&nbsp;
+                 <a href="#"><button>Customer</button></a>&nbsp;&nbsp;&nbsp;
+                 <a href="#"><button>Tutor</button></a>&nbsp;&nbsp;&nbsp;
+                 <a href="#"><button>Learner</button></a>&nbsp;&nbsp;&nbsp;
+          </font>
+      </h1>
+          
+
+      
 <?php  
-     include 'Footer.php';
+     //include 'Footer.php';
      include 'Login_Footer.php';
 ?>

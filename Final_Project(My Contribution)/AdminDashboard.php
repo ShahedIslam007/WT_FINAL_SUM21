@@ -1,19 +1,17 @@
 <?php  
      include 'AdminDashboard_Header.php';
 ?>
-     
-      <section id="banner">
-      	      <img src="Picture/logo2.png" class="logo">
-      </section>
 
-      <div class="admin">
-           <h1>Admin DashBoard</h1>
-           <a href="Admin_Photographer.php">Photographer</a>
-           <a href="#">Tutor</a>
-           <a href="#">Learner</a>
-           <a href="#">Upload on Gallary</a>
-           <a href="#">Payment Management</a>
-      </div>
+     <br><br><br><br><br><br>    
+     <h1 align="center">
+          <font face="Comic sans MS" size="7" color="#cc6600">Admin DashBoard<br>
+                 <a href="Admin_Photographer_CRUD.php"><button>Photographer</button></a>&nbsp;&nbsp;&nbsp;
+                 <a href="Admin_Tutor_CRUD.php"><button>Tutor</button></a>&nbsp;&nbsp;&nbsp;
+                 <a href="Admin_Learner_CRUD.php"><button>Learner</button></a>&nbsp;&nbsp;&nbsp;
+                 <a href="#"><button>Upload on Gallary</button></a>&nbsp;&nbsp;&nbsp;
+                 <a href="#"><button>Payment Management</button></a>
+          </font>
+      </h1>
    
 <?php  
      include 'AdminDashboard_Footer.php';

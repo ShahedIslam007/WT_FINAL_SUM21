@@ -1,33 +1,5 @@
-/*---------------------------------Admin Dashboard-------------------------------------*/
-
-.admin h1
+.home a
 {
-	font-family: Comic sans MS;
-	color: #ff9900;
-	font-size: 60px;
-	position: relative;
-	bottom: 450px;
-}
-
-.admin a
-{
-	position: relative;
-	bottom: 400px;
-	border: 1px solid #5f27cd;
 	text-decoration: none;
-	font-size: 32px;
-	border-radius: 8px;
-	color: wheat;
-	background-color: #5f27cd;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.admin a:hover
-{
-	background-color: #341f97;
-	color: #feca57;
 }
 

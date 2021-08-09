@@ -4,11 +4,6 @@
 	<meta charset="utf-8">
 	<title>Page</title>
 	<script type="text/javascript">
-		     function get(id)
-		     {
-		     	return documnet.getElementById(id);
-		     }
-
 		     function loadDoc()
 		     {
 		     	var xhr = new XMLHttpRequest();
@@ -19,9 +14,14 @@
 		     		{
 		     			get("demo").innerHTML = this.responseText;
 		     		}
-		     	}
+		     	};
 
 		     	xhr.send();
+		     }
+
+		     function get(id)
+		     {
+		     	return document.getElementById(id);
 		     }
 	</script>
 </head>
