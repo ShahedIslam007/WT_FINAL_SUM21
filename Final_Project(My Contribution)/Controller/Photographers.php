@@ -12,6 +12,10 @@
      $err_categories="";
      $district="";
      $err_district="";
+     $c_name="";
+     $err_c_name="";
+     $c_number="";
+     $err_c_number="";
 
      $hasError = false;
 
@@ -298,9 +302,130 @@ if(isset($_POST["confirm"]))
           }
 }
 
+/***********************************Sort Photographer For Booking********************************/
+
+if(isset($_POST["Search"]))
+{
+     if(empty($_POST["district"]))
+     {
+          $err_district="District Required";
+          $hasError = true;
+     }
+
+     else
+     {
+          $district=$_POST["district"];
+     }
+
+     if (!$hasError) 
+          {
+               $rs=AuthenticateData($district);
+               if($rs)
+               {
+                    session_start();
+                    $_SESSION["s_result"] = $rs;
+                    header("Location: Booking_District_Sort.php");
+               }
+
+               else
+               {
+                    header("Location: District_Error.php");
+               }
+          }
+}
+
+/***********************************Photographer Booking********************************/
+
+if(isset($_POST["book"]))
+{
+          if(empty($_POST["name"]))
+          {
+               $err_name="Name Required";
+               $hasError = true;
+          }
+
+          else
+          {
+               $name=$_POST["name"];
+          }
+
+          if(empty($_POST["phone"]))
+          {
+               $err_phone="Phone Required";
+               $hasError = true;
+          }
+
+          else
+          {
+               $phone=$_POST["phone"];
+          }
+
+          if(empty($_POST["addr"]))
+          {
+               $err_Addr="Address Required";
+               $hasError = true;
+          }
+
+          else
+          {  
+               $Addr=$_POST["addr"];
+          }
+
+          if(!isset($_POST["Category"]))
+          {
+               $err_categories="Category Required";
+               $hasError = true;
+          }
+
+          else
+          {
+               $categories=$_POST["Category"];
+          }
+
+          if(empty($_POST["c_name"]))
+          {
+               $err_c_name="Name Required";
+               $hasError = true;
+          }
+
+          else
+          {
+               $c_name=$_POST["c_name"];
+          }
+
+          if(empty($_POST["c_number"]))
+          {
+               $err_c_number="Number Required";
+               $hasError = true;
+          }
+
+          else
+          {
+               $c_number=$_POST["c_number"];
+          }
+
+          if (!$hasError) 
+          {
+               
+               $rs= insertBookPhotographer("$c_name","$c_number","$name","$Addr","$categories","$phone");
+               
+               if($rs===true)
+               {
+                    header("Location: Booking_Photographer.php");
+               }
+          }
+}
+
+
      function insertConfirmPhotographer($name,$phone,$Addr,$img,$Category)
      {
           $query="INSERT INTO confirm VALUES(NULL,'$name','$phone','$Addr','$img','$Category')";
+          return execute($query);
+     }
+
+     function insertBookPhotographer($c_name,$c_number,$name,$Addr,$Category,$phone)
+     {
+          $query="INSERT INTO booking VALUES(NULL,'$c_name','$c_number','$name','$Addr','$Category','$phone')";
           return execute($query);
      }
 
@@ -314,6 +439,12 @@ if(isset($_POST["confirm"]))
      {
      	$query= "select * from photographers";
      	return $rs= get($query);
+     }
+
+     function allBookingPhotographers()
+     {
+          $query= "select * from booking";
+          return $rs= get($query);
      }
 
      function allConfirmPhotographers()

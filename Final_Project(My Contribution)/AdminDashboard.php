@@ -12,7 +12,7 @@
                  <a href="Upload_Galary.php"><button>Upload on Gallary</button></a>&nbsp;&nbsp;
                  <a href="#"><button>Payment Management</button></a>&nbsp;&nbsp;
                  <a href="Verify_Photographers.php"><button>Verify Registration</button></a>&nbsp;&nbsp;
-                 <a href="#"><button>Booking Photographer</button></a>&nbsp;&nbsp;
+                 <a href="Booking_Photographer.php"><button>Booking Photographer</button></a>&nbsp;&nbsp;
                  <a href="#"><button>Review & Rattings</button></a>
           </font>
       </h1>
