@@ -1,3 +1,12 @@
+<?php  
+     include 'Controller/Galary.php';
+     $wedding = Wedding();
+     $adventure = Adventure();
+     $event = Event();
+     $film = Film();
+     $fashion = Fashion();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

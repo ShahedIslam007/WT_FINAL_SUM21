@@ -10,6 +10,8 @@
      $err_db="";
      $categories="";
      $err_categories="";
+     $district="";
+     $err_district="";
 
      $hasError = false;
 
@@ -197,6 +199,44 @@ if(isset($_POST["Delete"]))
 
                $err_db= $rs;
           }
+     }
+
+/***********************************Sort Photographer********************************/
+
+if(isset($_POST["Submit"]))
+{
+     if(empty($_POST["district"]))
+     {
+          $err_district="District Required";
+          $hasError = true;
+     }
+
+     else
+     {
+          $district=$_POST["district"];
+     }
+
+     if (!$hasError) 
+          {
+               $rs=AuthenticateData($district);
+               if($rs)
+               {
+                    session_start();
+                    $_SESSION["s_result"] = $rs;
+                    header("Location: Photographer_District_Sort.php");
+               }
+
+               else
+               {
+                    header("Location: District_Error.php");
+               }
+          }
+}
+
+     function AuthenticateData($district)
+     {
+          $query= "select * from photographers where Address='$district'";
+          return $rs= get($query);
      }
 
      function allPhotographers()
