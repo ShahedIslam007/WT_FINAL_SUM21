@@ -233,6 +233,77 @@ if(isset($_POST["Submit"]))
           }
 }
 
+/***********************************Confirm Photographers Registration********************************/
+
+if(isset($_POST["confirm"]))
+{
+     if(empty($_POST["name"]))
+          {
+               $err_name="Name Required";
+               $hasError = true;
+          }
+
+          else
+          {
+               $name=$_POST["name"];
+          }
+
+          if(empty($_POST["phone"]))
+          {
+               $err_phone="Phone Required";
+               $hasError = true;
+          }
+
+          else
+          {
+               $phone=$_POST["phone"];
+          }
+
+          if(empty($_POST["addr"]))
+          {
+               $err_Addr="Address Required";
+               $hasError = true;
+          }
+
+          else
+          {  
+               $Addr=$_POST["addr"];
+          }
+
+          if(!isset($_POST["Category"]))
+          {
+               $err_categories="Category Required";
+               $hasError = true;
+          }
+
+          else
+          {
+               $categories=$_POST["Category"];
+          }
+
+          if (!$hasError) 
+          {
+               $file_name= $_FILES['file'] ['name'];
+               $file_temp_loc= $_FILES['file'] ['tmp_name'];
+               $file_store= "Upload/".$file_name;
+
+               move_uploaded_file($file_temp_loc, $file_store);  
+               
+               $rs= insertConfirmPhotographer("$name","$phone","$Addr","$file_store","$categories");
+               
+               if($rs===true)
+               {
+                    header("Location: Verify_Photographers.php");
+               }
+          }
+}
+
+     function insertConfirmPhotographer($name,$phone,$Addr,$img,$Category)
+     {
+          $query="INSERT INTO confirm VALUES(NULL,'$name','$phone','$Addr','$img','$Category')";
+          return execute($query);
+     }
+
      function AuthenticateData($district)
      {
           $query= "select * from photographers where Address='$district'";
@@ -243,6 +314,12 @@ if(isset($_POST["Submit"]))
      {
      	$query= "select * from photographers";
      	return $rs= get($query);
+     }
+
+     function allConfirmPhotographers()
+     {
+          $query= "select * from confirm";
+          return $rs= get($query);
      }
 
      function getPhotographers($id)
