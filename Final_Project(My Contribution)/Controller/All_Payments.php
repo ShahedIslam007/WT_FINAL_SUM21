@@ -23,6 +23,13 @@
     $err_p_review="";
     $review="";
     $err_review="";
+    $l_name="";
+    $err_l_name="";
+    $t_review="";
+    $err_t_review="";
+    $tu_review="";
+    $err_tu_review="";
+
 
     $hasError = false;
 
@@ -351,7 +358,7 @@ if(isset($_POST["rr"]))
 
           if(empty($_POST["review"]))
           {
-               $err_review="Photographer Name Required";
+               $err_review="Photographer Review Required";
                $hasError = true;
           }
 
@@ -381,7 +388,7 @@ if(isset($_POST["dd"]))
      if(!$hasError)
           {
                $rs=deletePhotographerReview($_POST["id"]);
-               var_dump($rs);
+
                if($rs===true)
                {
                     header("Location: Ratting.php");
@@ -390,6 +397,7 @@ if(isset($_POST["dd"]))
                $err_db= $rs;
           }
 }
+
 
 function deletePhotographerReview($id)
      {
