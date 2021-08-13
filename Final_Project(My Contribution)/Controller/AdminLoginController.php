@@ -9,6 +9,10 @@
      $err_pass="";
 	 $cpass="";
      $err_cpass="";
+     $n_admin="";
+     $err_n_admin="";
+     $n_pass="";
+     $err_n_pass="";
 
      $hasError = false;
 
@@ -201,6 +205,52 @@
 		}
     }
 
+/*-------------------------------Add New Admin-------------------------------------------*/
+    
+    if (isset($_POST["admin"]))
+    {
+    	   if(empty($_POST["n_admin"])) 
+    	   {
+    	   	$err_n_admin="Email Recuired";
+    	   	$hasError = true;
+    	   }
+
+    	   else
+    	   {
+    	   	$n_admin=$_POST["n_admin"];
+    	   }
+
+    	   if(empty($_POST["n_pass"])) 
+    	   {
+    	   	$err_n_pass="Password Recuired";
+    	   	$hasError = true;
+    	   }
+
+    	   else
+    	   {
+    	   	$n_pass=$_POST["n_pass"];
+    	   }
+
+    	   if(!$hasError)
+          {          
+               $rs= insertAdmin("$n_admin","$n_pass");
+               
+               if($rs===true)
+               {
+                    header("Location: AdminDashboard.php");
+               }
+
+               $err_db= $rs;
+
+          }
+    }
+
+
+     function insertAdmin($n_admin,$n_pass)
+     {
+          $query="INSERT INTO admin_login VALUES(NULL,'$n_admin','$n_pass')";
+          return execute($query);
+     }
 
      function idPassword($id)
      {

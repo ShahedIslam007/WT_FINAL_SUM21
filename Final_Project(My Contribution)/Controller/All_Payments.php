@@ -15,10 +15,19 @@
     $err_t_name="";
     $t_paid="";
     $err_t_paid="";
+    $ratting="";
+    $err_ratting="";
+    $r_name="";
+    $err_r_name="";
+    $p_review="";
+    $err_p_review="";
+    $review="";
+    $err_review="";
 
     $hasError = false;
 
     $Categories = array("Bkash","Rocket","Nagad","Upay");
+    $Ratting = array("*","* *","* * *","* * * *","* * * * *");
 
 /*************************************Insert Photographers Payment*************************************/
 
@@ -86,7 +95,7 @@ if(isset($_POST["p_paid"]))
 
 if(isset($_POST["edit"]))
 {
-	      if(empty($_POST["c_name"]))
+	     if(empty($_POST["c_name"]))
           {
                $err_c_name="Customer Name Required";
                $hasError = true;
@@ -313,6 +322,87 @@ if(isset($_POST["tl_delete"]))
           }
 }
 
+
+/*************************************Update Photographers Review & Ratting************************************/
+
+if(isset($_POST["rr"]))
+{
+     if(empty($_POST["r_name"]))
+          {
+               $err_r_name="Reviewer Name Required";
+               $hasError = true;
+          }
+
+          else
+          {
+               $r_name=$_POST["r_name"];
+          }
+
+          if(empty($_POST["p_review"]))
+          {
+               $err_p_review="Photographer Name Required";
+               $hasError = true;
+          }
+
+          else
+          {
+               $p_review=$_POST["p_review"];
+          }
+
+          if(empty($_POST["review"]))
+          {
+               $err_review="Photographer Name Required";
+               $hasError = true;
+          }
+
+          else
+          {
+               $review=$_POST["review"];
+          }
+
+          $ratting=$_POST["Ratting"];
+
+          if(!$hasError)
+          {
+               $rs=updatePhotographerReview("$r_name","$p_review","$review","$ratting",$_POST["id"]);
+               if($rs===true)
+               {
+                    header("Location: Ratting.php");
+               }
+
+               $err_db= "Dublicate Data";
+          }
+}
+
+/*************************************Delete Photographers Review & Ratting************************************/
+
+if(isset($_POST["dd"]))
+{
+     if(!$hasError)
+          {
+               $rs=deletePhotographerReview($_POST["id"]);
+               var_dump($rs);
+               if($rs===true)
+               {
+                    header("Location: Ratting.php");
+               }
+
+               $err_db= $rs;
+          }
+}
+
+function deletePhotographerReview($id)
+     {
+          $query= "DELETE from photographers_rr where id= $id";
+          return execute($query);
+     }
+
+function updatePhotographerReview($r_name,$p_review,$review,$ratting,$id)
+     {
+          $query = "update photographers_rr set Name='$r_name', ReviewTo='$p_review', Review='$review',Ratting='$ratting' where id=$id";
+          return execute($query);
+     }
+
 function deleteTutor($id)
      {
           $query= "DELETE from t_payment where id= $id";
@@ -343,5 +433,18 @@ function updateTutor($l_name,$t_paid,$t_name,$Category,$id)
           $query = "update t_payment set l_name='$l_name', paid='$t_paid', t_name='$t_name',via='$Category' where id=$id";
           return execute($query);
      }
+
+function allPhotographersReview()
+     {
+          $query= "select * from photographers_rr";
+          return $rs= get($query);
+     }  
+
+function getPhotographersReview($id)
+     {
+          $query= "select * from photographers_rr where id= $id";
+          $rs= get($query);
+          return $rs[0];
+     }   
 
 ?>

@@ -11,10 +11,14 @@
       	      <img src="Picture/logo2.png" class="logo">
       </section>
 
-      <div class="home">
+      <div>
 <?php  
      include 'space.php';
-?>
+?>  
+          <a href="Admin_login.php" style="text-decoration: none; font-size: 28px;">Logout</a>
+<?php  
+     include 'space.php';
+?>          
            <a href="Start.php" style="text-decoration: none; font-size: 28px;">Home</a>
       </div>
       
