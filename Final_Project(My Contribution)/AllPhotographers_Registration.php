@@ -12,11 +12,11 @@
 <body>
       <table align="center" border="1">
       	      <th>Sl</th>
-              <th></th>
+                <th></th>
       	      <th>Name</th>
       	      <th>Phone</th>
       	      <th>Address</th>
-              <th>Category</th>
+                <th>Category</th>
       	      <th></th>
 
       	      <?php  

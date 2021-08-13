@@ -83,7 +83,7 @@
 
 if(isset($_POST["Insert"]))
      {
-           if(empty($_POST["name"]))
+          if(empty($_POST["name"]))
           {
                $err_name="Name Required";
                $hasError = true;
