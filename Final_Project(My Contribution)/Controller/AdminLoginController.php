@@ -87,12 +87,15 @@
 		if (!$hasError) 
 		{
 			$rs=AuthenticateData($email, $pass);
-			if($rs===true)
+			if($rs)
 			{
+				session_start();
+                    $_SESSION["data"] = $rs;
 				header("Location: AdminDashboard.php");
+
 			}
 
-			$err_db="Username Or Password Invalid";
+			$err_db="Password Invalid !!<br>";
 		}
      }
 
@@ -271,4 +274,20 @@
 		$rs = get($query);
 		return $rs;
 	}
+
+	function checkEmail($email)
+	{
+		$query = "select email from admin_login where Email='$email'";
+		$rs = get($query);
+		if(count($rs)>0)
+		{
+			return true;
+		}
+
+		else
+		{
+			return false;
+		}
+	}
+
 ?>

@@ -1,3 +1,12 @@
+<?php  
+     session_start();
+
+     if(isset($_SESSION['data']))
+     {
+        header("Location: AdminDashboard.php");
+     }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
