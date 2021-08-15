@@ -2,6 +2,13 @@
      include 'AdminDashboard_Header.php';
 ?>
 
+<?php
+     if(!isset($_COOKIE['loggedUser']))
+     {
+        header("Location: Admin_login.php");
+     }
+?>
+     <h1 align="center">Welcome <?php echo $_COOKIE["loggedUser"]; ?> </h1>
      <br><br><br><br><br><br>    
      <h1 align="center">
           <font face="Comic sans MS" size="7" color="#cc6600">Admin DashBoard<br>
