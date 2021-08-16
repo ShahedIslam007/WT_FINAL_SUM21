@@ -26,7 +26,7 @@
       	   <h1 align="left">&nbsp;Wedding Photography:</h1><br>
       	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
              <?php  
-             echo "<img src='Picture/1.jpg' height='400' width='400' vspace='20' class='img1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";  
+             echo "<img src='Picture/OIPp.jpg' height='400' width='400' vspace='20' class='img1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";  
              ?>
       	   <img src="Picture/43.jpg" height="400" width="400" vspace="20" class="img1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       	   <img src="Picture/57.jpg" height="400" width="400" vspace="20" class="img1"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -79,7 +79,7 @@
            <br><br><br>
       	   <h1 align="left">&nbsp;Fashion Photography:</h1><br>
       	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <img src="Picture/14.jpg" height="400" width="400" vspace="20" class="img1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <img src="Picture/OIP (2).jpg" height="400" width="400" vspace="20" class="img1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            <img src="Picture/15.jpg" height="400" width="400" vspace="20" class="img1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            <img src="Picture/16.jpg" height="400" width="400" vspace="20" class="img1"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            <?php  

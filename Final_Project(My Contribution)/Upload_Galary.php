@@ -9,6 +9,10 @@
      <title>Upload On Gallery</title>
 </head>
 <body>
+    <div align="right">
+
+           <a href="AdminDashboard.php" style="text-decoration: none; font-size: 28px;">Dashboard</a>
+      </div>
       <form action="" method="post" enctype="multipart/form-data">
              <h1 align="center">Upload Photo On Gallery</h1>
              <table align="center">

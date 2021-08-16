@@ -45,11 +45,11 @@
                 //var atThe = get("email").value.indexOf('@');
                 //var dot = get("email").value.indexOf('.');
 
-                if(get("email").value.indexOf('.') > get("email").value.indexOf('@'))
+                /*if(get("email").value.indexOf('.') > get("email").value.indexOf('@'))
                 {
                     hasError = true;
                     get("err_email").innerHTML="**Invalid ('@') & ('.') Position";
-                }
+                }*/
 
                 if(get("number").value == "")
                 {

@@ -41,6 +41,10 @@
      </script>
 </head>
 <body>
+     <div align="right">
+
+           <a href="AdminDashboard.php" style="text-decoration: none; font-size: 28px;">Dashboard</a>
+      </div>
       <h1 align="center">User Review & Ratting Informations</h1><br><br>
       <div align="center">
       	    <button onclick="loadDoc()">Photographers Review & Ratting</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

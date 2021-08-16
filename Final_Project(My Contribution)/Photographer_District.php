@@ -9,6 +9,10 @@
      <title>Sorting Photographer</title>
 </head>
 <body>
+    <div align="right">
+
+           <a href="AdminDashboard.php" style="text-decoration: none; font-size: 28px;">Dashboard</a>
+      </div>
       <form method="post" action="">
              <h1 align="center">Sorting Photographer By District</h1>
 

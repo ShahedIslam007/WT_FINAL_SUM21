@@ -41,6 +41,10 @@
      </script>
 </head>
 <body>
+     <div align="right">
+
+           <a href="AdminDashboard.php" style="text-decoration: none; font-size: 28px;">Dashboard</a>
+      </div>
       <h1 align="center">Verify All Photographers Registration</h1><br>
       <div align="center">
       	    <button onclick="loadDoc()">All Photographers</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

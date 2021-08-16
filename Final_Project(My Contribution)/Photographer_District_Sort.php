@@ -15,6 +15,10 @@
      <title>All Photographers</title>
 </head>
 <body>
+    <div align="right">
+
+           <a href="AdminDashboard.php" style="text-decoration: none; font-size: 28px;">Dashboard</a>
+      </div>
       <table align="center" border="1">
                 <th>Sl</th>
                 <th></th>

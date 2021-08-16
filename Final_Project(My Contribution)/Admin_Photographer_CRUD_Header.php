@@ -38,4 +38,9 @@
 ?>
            <a href="Start.php" style="text-decoration: none; font-size: 28px;">Home</a>
       </div>
+
+      <div align="right">
+
+           <a href="AdminDashboard.php" style="text-decoration: none; font-size: 28px;">Dashboard</a>
+      </div>
       
