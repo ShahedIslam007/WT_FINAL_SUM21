@@ -1,0 +1,22 @@
+
+	
+		*{
+		margin:0;
+	    padding:0;
+		
+        font-family: ageo;
+        font-size: 16px;
+	   }
+	
+	body{
+		background-image:url(img3.jpg);
+		background-position:justify;
+		background-repeat: no-repeat;
+		background-size: 1600px 800px;
+		color:#FFFFFF;
+		
+	}
+
+	
+	
+	

@@ -1,0 +1,308 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+/*-----------------Start Page----------------------*/
+
+.logo
+{
+	height: 150px;
+	width: 160px;
+	position: absolute;
+	top: 1%;
+	left: 1%;
+}
+
+.option
+{
+	position: absolute;
+	top: 4%;
+	left: 58%;
+}
+
+.option a
+{
+	text-shadow: 5px 5px 5px #fc5c65;
+	font-size: 29px;
+	color: #00b894;
+	text-decoration: none;
+	transition: font-size 1s, color 0.5s;
+}
+
+.option a:hover
+{
+	font-size: 35px;
+	color: #6F1E51;
+}
+
+.container
+{
+	font-family: Comic sans MS;
+	text-align: center;
+	position: absolute;
+	top: 42%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+}
+
+.container span
+{
+	text-transform: uppercase;
+	display: block;
+}
+
+.text1                   /*-------WelCome Effect--------*/
+{
+	color: #0c2461;
+	font-size: 70px;
+	font-weight: 700;
+	letter-spacing: 8px;  
+	margin-bottom: 20px;
+	position: relative;
+	animation: text 3s 1;
+}
+
+.text2                 /*-------WelCome Effect--------*/
+{
+	font-size: 40px;
+	color: #b71540;
+}
+
+@keyframes text        /*-------WelCome Effect--------*/
+{
+	0%
+	{
+		margin-bottom: -40%;
+	}
+	30%
+	{
+		letter-spacing: 25px;
+		margin-bottom: -40%;
+	}
+	85%
+	{
+		letter-spacing: 8px;
+		margin-bottom: -40%;
+	}
+}
+
+
+#sidenav
+{
+	width: 250px;
+	height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: #009688;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+nav ul li 
+{
+	list-style: none;
+	margin: 50px 20px;
+}
+
+#sidenav ul a
+{
+	line-height: 35px;
+	padding-left: 0px;
+}
+
+nav ul li a
+{
+	font-family: Comic sans MS;
+	font-size: 18px;
+	text-decoration: none;
+	list-style: none;
+	color: #fff;
+	padding-left: 40px;
+	transition: font-size 0.4s, color 0.4s;
+}
+
+nav ul li a:hover
+{
+	font-size: 25px;
+	color: #1B1464;
+}
+
+#menubtn
+{
+	width: 50px;
+	height: 50px;
+    background: #009688;
+	text-align: center;
+	position: fixed;
+	right: 30px;
+	top: 20px;
+	border-radius: 3px;
+	z-index: 3;
+	cursor: pointer;
+}
+
+#menubtn img
+{
+	width: 20px;
+	margin-top: 15px;
+}
+
+
+/*----------Gallary------------*/
+
+#gallary
+{
+	background-color: #262239;
+	font-family: poppins;
+	width: 100%;
+	padding: 70px 0;
+}
+
+.title h2
+{
+	color: #2d3436;
+	top: 10%;
+	margin: absulate;
+	font-size: 4em;
+	width: 100%;
+	background: linear-gradient(to left,#2ecc71,#3498db,#9b59b6,#f39c12);
+	/*-webkit-text-fill-color: transparent;*/
+	-webkit-backround-clip:text;
+	animation: animate 5s linear infinite;
+	background-size: 500%;
+    text-align: center;
+}
+
+@keyframes animate
+{
+	0%
+	{
+		background-position: 0 100%;
+	}
+	50%
+	{
+		background-position: 100% 0;
+	}
+	100%
+	{
+		background-position: 0 100%;
+	}
+}
+
+#img
+{
+	background-color: #262239;
+	width: 100%;
+	padding: 70px 0;
+}
+
+#img h1
+{
+	font-family: Comic sans MS;
+	color: #ff9900;
+}
+
+.img1
+{
+	border-radius: 10px;
+}
+
+#img h2
+{
+	font-size: 60px;
+	font-family: Comic sans MS;
+	color: #009688;
+}
+
+.fb
+{
+	height: 150px;
+	width: 250px;
+	transition: height 1.5s, width 1.5s;
+}
+
+.fb:hover
+{
+	height: 190px;
+    width: 290px;
+}
+
+.tel
+{
+	height: 130px;
+	width: 150px;
+	transition: height 1.5s, width 1.5s;
+}
+
+.tel:hover
+{
+	height: 170px;
+    width: 190px;
+}
+
+.insta
+{
+	height: 130px;
+	width: 150px;
+	transition: height 1.5s, width 1.5s;
+}
+
+.insta:hover
+{
+	height: 170px;
+    width: 190px;
+}
+
+.mes
+{
+	height: 130px;
+	width: 150px;
+	transition: height 1.5s, width 1.5s;
+}
+
+.mes:hover
+{
+	height: 170px;
+    width: 190px;
+}
+
+/*----Scroll Up Button-----*/
+
+.to-top
+{
+	background: #fffa65;
+	position: fixed;
+	bottom: 16px;
+	left: 32px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 32px;
+	color: #0984e3;
+	text-decoration: none;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .4s;
+}
+
+.to-top.active
+{
+	bottom: 32px;
+	pointer-events: auto;
+	opacity: 1;
+}
+
+html
+{
+	scroll-behavior: smooth;
+}
+
+
+

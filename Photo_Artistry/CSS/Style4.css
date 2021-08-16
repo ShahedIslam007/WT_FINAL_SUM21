@@ -1,0 +1,63 @@
+/*-------------------------Login/Sign-up-------------------------------*/
+
+.login h1
+{
+	font-family: Comic sans MS;
+	color: #ff9900;
+	font-size: 60px;
+	position: relative;
+	bottom: 450px;
+}
+
+.login a
+{
+	position: relative;
+	bottom: 400px;
+	border: 1px solid #5f27cd;
+	text-decoration: none;
+	font-size: 32px;
+	border-radius: 8px;
+	color: wheat;
+	background-color: #5f27cd;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.login a:hover
+{
+	background-color: #341f97;
+	color: #feca57;
+}
+
+.sign-up h1
+{
+	font-family: Comic sans MS;
+	color: #ee5253;
+	font-size: 60px;
+	position: relative;
+	bottom: 397px;
+}
+
+.sign-up a
+{
+	position: relative;
+	bottom: 360px;
+	border: 1px solid #0984e3;
+	text-decoration: none;
+	font-size: 32px;
+	border-radius: 8px;
+	color: wheat;
+	background-color: #0984e3;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.sign-up a:hover
+{
+	background-color: #273c75;
+	color: #feca57;
+}
