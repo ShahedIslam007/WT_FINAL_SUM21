@@ -23,7 +23,13 @@
                  <a href="Ratting.php"><button>Review & Rattings</button></a>
                  <a href="addAdmin.php"><button>Add Admin</button></a>
           </font>
-      </h1>
+      </h1><br>
+
+      <div align="center">
+            <input type="text" name="" placeholder="Search??" size="50" onkeyup="search(this)">
+      </div>
+
+      <div id="result" align="center"></div>
    
 <?php  
      include 'AdminDashboard_Footer.php';

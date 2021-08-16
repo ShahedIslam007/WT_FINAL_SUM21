@@ -91,7 +91,7 @@
 			{
 				session_start();
                     $_SESSION["data"] = $rs;
-                    setcookie("loggedUser",$email,time()+10);
+                    setcookie("loggedUser",$email,time()+1000000);
 				header("Location: AdminDashboard.php");
 
 			}

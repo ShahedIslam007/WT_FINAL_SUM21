@@ -13,6 +13,7 @@
 	<meta charset="utf-8">
 	<title>Admin Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="CSS/Style.css">
+     <script src="JavaScript/Search.js"></script>
 </head>
 <body background="Picture/OIP (1).jpg">
 

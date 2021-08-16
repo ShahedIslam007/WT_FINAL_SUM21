@@ -477,4 +477,18 @@ if(isset($_POST["book"]))
           $query= "DELETE from photographers where id= $id";
           return execute($query);
      }
+
+     function search($key)
+     {
+          $query = "select id,category from photographers where name like '%$key%' or category like '%$key%'";
+          $rs = get($query);
+          return $rs;
+     }
+
+     function searchPhotographers($id)
+     {
+          $query= "select * from photographers where id= $id";
+          $rs= get($query);
+          return $rs[0];
+     }
 ?>
